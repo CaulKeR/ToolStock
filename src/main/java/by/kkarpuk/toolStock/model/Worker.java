@@ -13,20 +13,29 @@ import java.sql.Date;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tool {
+public class Worker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String code;
+    private String firstName;
 
     @Column
-    private Long toolCatalogueId;
+    private String lastName;
 
     @Column
-    private Long toolStatusId;
+    private String patronymic;
+
+    @Column
+    private Long positionId;
+
+    @Column
+    private Date birthDate;
+
+    @Column
+    private Date employmentDate;
 
     @Column
     private Date deleteDate;

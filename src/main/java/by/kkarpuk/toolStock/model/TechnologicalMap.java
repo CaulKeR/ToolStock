@@ -13,22 +13,28 @@ import java.sql.Date;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tool {
+public class TechnologicalMap {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String code;
+    private Long toolId;
 
     @Column
-    private Long toolCatalogueId;
+    private Long equipmentId;
 
     @Column
-    private Long toolStatusId;
+    private Long workerId;
 
     @Column
-    private Date deleteDate;
+    private Long managerId;
+
+    @Column
+    private Date issuingDate;
+
+    @Column
+    private Date receptionDate;
 
 }

@@ -13,20 +13,29 @@ import java.sql.Date;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Tool {
+public class ToolCatalogue {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String code;
+    private Long toolTypeId;
 
     @Column
-    private Long toolCatalogueId;
+    private String title;
 
     @Column
-    private Long toolStatusId;
+    private Date receiptDate;
+
+    @Column
+    private Date writeOffDate;
+
+    @Column
+    private Date productionDate;
+
+    @Column
+    private Integer shelfLife;
 
     @Column
     private Date deleteDate;
